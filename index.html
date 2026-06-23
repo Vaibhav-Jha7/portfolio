@@ -47,20 +47,18 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      /* 🎨 EDIT YOUR COLORS HERE */
       --bg:       #07080a;
       --bg2:      #0d0f14;
       --bg3:      #13151d;
       --surface:  #181c26;
       --border:   rgba(255,255,255,0.07);
-      --accent:   #5cffb1;       /* ← change accent color */
+      --accent:   #5cffb1;
       --accent2:  #3de8f0;
       --gold:     #f5c842;
       --text:     #e8eaf2;
       --muted:    #7a8099;
       --radius:   14px;
       --radius-lg:22px;
-      /* FONTS */
       --font-head: 'Syne', sans-serif;
       --font-body: 'DM Sans', sans-serif;
     }
@@ -271,7 +269,6 @@
       overflow: hidden; position: relative;
       font-size: 7rem;
     }
-    /* EDIT: Replace emoji with <img> tag for your photo */
     .avatar-initials {
       font-family: var(--font-head); font-size: 4.5rem;
       font-weight: 800; color: var(--accent); user-select: none;
@@ -478,7 +475,6 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 3rem;
     }
-    /* EDIT: add background-image: url('your-screenshot.jpg') to each */
     .proj-thumb-1 { background: linear-gradient(135deg,#1a2a1f,#0d1a14); }
     .proj-thumb-2 { background: linear-gradient(135deg,#1a1a2a,#0d0d1a); }
     .proj-thumb-3 { background: linear-gradient(135deg,#2a1a1a,#1a0d0d); }
@@ -658,6 +654,7 @@
     .field-error.show { display: block; }
     input.invalid, textarea.invalid { border-color: #ff6b6b; }
 
+    #form-status { margin-top: 1rem; font-size: 0.9rem; display: none; }
     #form-status.success { color: var(--accent); }
     #form-status.error { color: #ff6b6b; }
 
@@ -709,19 +706,18 @@
     #back-top:hover { transform: scale(1.1); }
 
     /* ===================== RESPONSIVE ===================== */
-    
     @media(max-width:1024px){
-  .skills-grid, .projects-grid, .services-grid, .testi-grid { grid-template-columns:1fr 1fr; }
-  .hero-inner { grid-template-columns:1fr; text-align:center; }
-  .hero-right { display:flex; justify-content:center; order:-1; }
-  .avatar-wrap { width:220px; height:220px; }
-  .avatar-circle { width:220px; height:220px; font-size:4rem; }
-  .avatar-ring, .avatar-ring2 { display:none; }
-  .hero-btns, .hero-stats { justify-content:center; }
-  .about-grid { grid-template-columns:1fr; gap:2.5rem; }
-  .contact-grid { grid-template-columns:1fr; }
-  .bars-grid { grid-template-columns:1fr; }
-}
+      .skills-grid, .projects-grid, .services-grid, .testi-grid { grid-template-columns:1fr 1fr; }
+      .hero-inner { grid-template-columns:1fr; text-align:center; }
+      .hero-right { display:flex; justify-content:center; order:-1; }
+      .avatar-wrap { width:220px; height:220px; }
+      .avatar-circle { width:220px; height:220px; font-size:4rem; }
+      .avatar-ring, .avatar-ring2 { display:none; }
+      .hero-btns, .hero-stats { justify-content:center; }
+      .about-grid { grid-template-columns:1fr; gap:2.5rem; }
+      .contact-grid { grid-template-columns:1fr; }
+      .bars-grid { grid-template-columns:1fr; }
+    }
     @media(max-width:768px){
       nav { padding:1rem 1.5rem; }
       .nav-links { display:none; }
@@ -733,7 +729,7 @@
       .skills-grid, .projects-grid, .services-grid, .testi-grid { grid-template-columns:1fr; }
       .form-row { grid-template-columns:1fr; }
       .avatar-wrap { width:160px; height:160px; }
-.avatar-circle { width:160px; height:160px; font-size:3rem; }
+      .avatar-circle { width:160px; height:160px; font-size:3rem; }
     }
 
     /* Mobile nav */
@@ -755,30 +751,19 @@
       font-size:1.8rem; cursor:pointer;
     }
 
-    .social-row {
-  display: flex;
-  gap: 15px;
-}
-
-.social-btn {
-  font-size: 22px;
-  color: #555;
-  transition: 0.3s;
-}
-
-.social-btn:hover {
-  color: #0077b5; /* LinkedIn blue (you can customize) */
-  transform: scale(1.2);
-}
-
-.social-btn:hover .fa-github { color: #333; }
-.social-btn:hover .fa-linkedin { color: #0077b5; }
-.social-btn:hover .fa-twitter { color: #1da1f2; }
-.social-btn:hover .fa-instagram { color: #e4405f; }
+    .social-row { display: flex; gap: 15px; }
+    .social-btn { font-size: 22px; color: #555; transition: 0.3s; }
+    .social-btn:hover { color: #0077b5; transform: scale(1.2); }
+    .social-btn:hover .fa-github { color: #333; }
+    .social-btn:hover .fa-linkedin { color: #0077b5; }
+    .social-btn:hover .fa-twitter { color: #1da1f2; }
+    .social-btn:hover .fa-instagram { color: #e4405f; }
   </style>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script></head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
 <body>
-  <!-- ===== VKJ INTRO ANIMATION ===== -->
+
+<!-- ===== VKJ INTRO ANIMATION ===== -->
 <style>
   #vkj-intro {
     position: fixed; inset: 0; z-index: 99999;
@@ -888,7 +873,7 @@
     <div class="vkj-logo" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">𝑽𝑲𝑱<span class="dot">.</span></div>
     <div class="vkj-glitch" aria-hidden="true"></div>
   </div>
-  <div class="intro-tagline">   Full-Stack Developer &nbsp;·&nbsp; Competitive programmer &nbsp;·&nbsp;problem solver</div>
+  <div class="intro-tagline">Full-Stack Developer &nbsp;·&nbsp; Competitive programmer &nbsp;·&nbsp; Problem solver</div>
   <div class="progress-wrap">
     <div class="progress-track"><div class="progress-fill" id="pFill"></div></div>
     <div class="progress-dots">
@@ -959,540 +944,514 @@
 })();
 </script>
 <!-- ===== END INTRO ANIMATION ===== -->
+
 <!-- Custom Cursor -->
 <div id="cursor-dot"></div>
 <div id="cursor-ring"></div>
+
 <!-- Mobile Nav Overlay -->
 <div aria-label="Mobile Navigation" class="mobile-nav" id="mobileNav" role="navigation">
-<button aria-label="Close menu" class="close-nav" id="closeNav">✕</button>
-<a href="#home" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Home</a>
-<a href="#about" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">About</a>
-<a href="#skills" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Skills</a>
-<a href="#projects" onclick="closeMobileNav()"style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Projects</a>
-<!-- <a href="#services" onclick="closeMobileNav()">Services</a> -->
-<a href="#contact" onclick="closeMobileNav()"style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Contact</a>
+  <button aria-label="Close menu" class="close-nav" id="closeNav">✕</button>
+  <a href="#home" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Home</a>
+  <a href="#about" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">About</a>
+  <a href="#skills" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Skills</a>
+  <a href="#projects" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Projects</a>
+  <a href="#contact" onclick="closeMobileNav()" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Contact</a>
 </div>
+
 <!-- NAV -->
 <nav aria-label="Main Navigation" role="navigation">
-<a aria-label="Home" class="nav-logo" href="#home" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VKJ<span>.</span></a>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<a class="nav-cta" href="#contact">Hire Me</a>
-<button aria-expanded="false" aria-label="Open mobile menu" id="menu-toggle">
-<span></span><span></span><span></span>
-</button>
+  <a aria-label="Home" class="nav-logo" href="#home" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VKJ<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Hire Me</a>
+  <button aria-expanded="false" aria-label="Open mobile menu" id="menu-toggle">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
 <!-- HERO -->
 <section aria-label="Hero" id="home">
-<div class="hero-bg"></div>
-<div class="grid-bg"></div>
-<div class="hero-inner">
-<div class="hero-left">
-<div class="hero-tag">Available for work</div>
-<h1 class="hero-name" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+  <div class="hero-bg"></div>
+  <div class="grid-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">Available for work</div>
+      <h1 class="hero-name" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
         Vaibhav Kumar
         <span class="line2">Jha</span>
-</h1>
-<!-- ✏️ EDIT: Update your tagline below -->
-<p class="hero-role">
+      </h1>
+      <p class="hero-role">
         Full-Stack Developer · UI/UX Designer · Creative Technologist<br/>
         Building digital experiences that are <strong>fast, beautiful &amp; impactful.</strong>
-</p>
-<div class="hero-btns">
-<a class="btn-primary" href="#projects">View My Work</a>
-<a class="btn-outline" href="#contact">Get In Touch</a>
-</div>
-<div class="hero-stats">
-<!-- ✏️ EDIT: Update your stats below -->
-<div class="stat">
-<!-- <div class="stat-num" data-count="3">0</div>
-          <div class="stat-label">Years of Experience</div> -->
-</div>
-<div class="stat">
-<div class="stat-num" data-count="20">0</div>
-<div class="stat-label">Projects Completed</div>
-</div>
-<div class="stat">
-<!-- <div class="stat-num" data-count="15">0</div> -->
-<!-- <div class="stat-label">Happy Clients</div> -->
-</div>
-</div>
-</div>
-<div aria-hidden="true" class="hero-right">
-<div class="avatar-wrap">
-<div class="avatar-ring"></div>
-<div class="avatar-ring2"></div>
-<div class="avatar-circle">
-<img src="avtaarimage.jpg" style="width:100%;height:100%;object-fit:cover;"/>
-<span class="avatar-initials"></span>
-</div>
-<div class="avatar-badge">✦ Open to work</div>
-</div>
-</div>
-</div>
+      </p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#projects">View My Work</a>
+        <a class="btn-outline" href="#contact">Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" data-count="20">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" class="hero-right">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring2"></div>
+        <div class="avatar-circle">
+          <img src="avtaarimage.jpg" style="width:100%;height:100%;object-fit:cover;"/>
+          <span class="avatar-initials"></span>
+        </div>
+        <div class="avatar-badge">✦ Open to work</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ABOUT -->
 <section aria-labelledby="about-heading" id="about">
-<div class="section-inner">
-<span class="section-label reveal">Who I am</span>
-<h2 class="section-title reveal" id="about-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">About Me</h2>
-<div class="divider reveal"></div>
-<div class="about-grid">
-<div>
-<div class="about-card reveal">
-<div class="about-info-row">
-<!-- ✏️ EDIT: Update all your personal info below -->
-<div class="info-item">
-<div class="info-icon">👤</div>
-<div>
-<div class="info-label">Full Name</div>
-<div class="info-val">Vaibhav Kumar Jha</div>
-</div>
-</div>
-<div class="info-item">
-<div class="info-icon">📍</div>
-<div>
-<div class="info-label">Location</div>
-<div class="info-val">Darbhanga,Bihar , India</div>
-</div>
-</div>
-<div class="info-item">
-<div class="info-icon">🎓</div>
-<div>
-<div class="info-label">Education</div>
-<div class="info-val">B.Tech / Computer science &amp; Engineering</div>
-</div>
-</div>
-<div class="info-item">
-<div class="info-icon">💼</div>
-<div>
-<div class="info-label">Current Role</div>
-<div class="info-val">Full-Stack Developer</div>
-</div>
-</div>
-<div class="info-item">
-<div class="info-icon">🌐</div>
-<div>
-<div class="info-label">Languages</div>
-<div class="info-val">Hindi, English , Maithili</div>
-</div>
-</div>
-<div class="info-item">
-<div class="info-icon">⚡</div>
-<div>
-<div class="info-label">Interests</div>
-<div class="info-val">Coding, Design, Open Source</div>
-</div>
-</div>
-</div>
-<a class="btn-primary" download="" href="my resume.pdf (1) (1).pdf" style="display:inline-block;font-size:0.9rem;padding:0.65rem 1.6rem;">
+  <div class="section-inner">
+    <span class="section-label reveal">Who I am</span>
+    <h2 class="section-title reveal" id="about-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">About Me</h2>
+    <div class="divider reveal"></div>
+    <div class="about-grid">
+      <div>
+        <div class="about-card reveal">
+          <div class="about-info-row">
+            <div class="info-item">
+              <div class="info-icon">👤</div>
+              <div>
+                <div class="info-label">Full Name</div>
+                <div class="info-val">Vaibhav Kumar Jha</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-val">Darbhanga, Bihar, India</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🎓</div>
+              <div>
+                <div class="info-label">Education</div>
+                <div class="info-val">B.Tech / Computer Science &amp; Engineering</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">💼</div>
+              <div>
+                <div class="info-label">Current Role</div>
+                <div class="info-val">Full-Stack Developer</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🌐</div>
+              <div>
+                <div class="info-label">Languages</div>
+                <div class="info-val">Hindi, English, Maithili</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">⚡</div>
+              <div>
+                <div class="info-label">Interests</div>
+                <div class="info-val">Coding, Design, Open Source</div>
+              </div>
+            </div>
+          </div>
+          <a class="btn-primary" download="" href="my resume.pdf (1) (1).pdf" style="display:inline-block;font-size:0.9rem;padding:0.65rem 1.6rem;">
             ↓ Download Resume
           </a>
-</div>
-</div>
-<div class="about-text">
-<!-- ✏️ EDIT: Update your bio below -->
-<p>
-          Hey! I'm <strong>Vaibhav Kumar Jha</strong> — a passionate  Full stack developer and problem solver.
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          Hey! I'm <strong>Vaibhav Kumar Jha</strong> — a passionate Full Stack developer and problem solver.
           I love turning complex problems into simple, elegant, and intuitive digital products.
         </p>
-<p>
+        <p>
           With a strong foundation in <strong>full-stack development</strong>, I build everything from blazing-fast
           web apps to polished UI components. I care deeply about user experience, clean code, and
           shipping products that make a real difference.
         </p>
-<p>
+        <p>
           When I'm not coding, you'll find me exploring new technologies, contributing to open-source, or
           sketching out design ideas. I'm always open to exciting collaborations and new challenges!
         </p>
-<!-- ✏️ EDIT: Update education / experience timeline -->
-<div class="timeline">
-<div class="tl-title">Education &amp; Experience</div>
-<div class="tl-item">
-<div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-<div class="tl-content">
-<div class="tl-year">2026 Present</div>
-<div class="tl-role">Full-Stack Developer</div>
-<!-- <div class="tl-place">Your Company / Freelance</div> -->
-</div>
-</div>
-<div class="tl-item">
-<div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
-<div class="tl-content">
-<div class="tl-year">2025</div>
-<div class="tl-role">Frontend Developer Intern</div>
-<!-- <div class="tl-place">Your Previous Company</div> -->
-</div>
-</div>
-<div class="tl-item">
-<div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-<div class="tl-content">
-<div class="tl-year">2023-2027</div>
-<div class="tl-role">B.Tech in Computer Science</div>
-<div class="tl-place">Bihar Engineering University , Patna</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+        <div class="timeline">
+          <div class="tl-title">Education &amp; Experience</div>
+          <div class="tl-item">
+            <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2026 – Present</div>
+              <div class="tl-role">Full-Stack Developer</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2025</div>
+              <div class="tl-role">Frontend Developer Intern</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2023–2027</div>
+              <div class="tl-role">B.Tech in Computer Science</div>
+              <div class="tl-place">Bihar Engineering University, Patna</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- SKILLS -->
 <section aria-labelledby="skills-heading" id="skills">
-<div class="section-inner">
-<span class="section-label reveal">What I know</span>
-<h2 class="section-title reveal" id="skills-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">My Skills</h2>
-<div class="divider reveal"></div>
-<p class="section-sub reveal">Technologies and tools I've worked with across design, development, and deployment.</p>
-<div class="skills-grid">
-<!-- ✏️ EDIT: Update skill categories and tags below -->
-<div class="skill-card reveal">
-<div class="skill-card-icon" style="background:rgba(92,255,177,0.1);">🖥️</div>
-<div class="skill-card-title">Frontend</div>
-<div class="skill-card-desc">Building responsive, accessible, and beautiful user interfaces.</div>
-<div class="skill-tags">
-<span class="stag">HTML5</span><span class="stag">CSS3</span>
-<span class="stag">JavaScript</span><span class="stag">React</span>
-<span class="stag">Next.js</span><span class="stag">Tailwind</span>
-</div>
-</div>
-<div class="skill-card reveal">
-<div class="skill-card-icon" style="background:rgba(61,232,240,0.1);">⚙️</div>
-<div class="skill-card-title">Backend</div>
-<div class="skill-card-desc">Crafting robust APIs and server-side logic that scales.</div>
-<div class="skill-tags">
-<span class="stag">Node.js</span><span class="stag">Express</span>
-<span class="stag">Python</span><span class="stag">Django</span>
-<span class="stag">REST API</span>
-</div>
-</div>
-<div class="skill-card reveal">
-<div class="skill-card-icon" style="background:rgba(245,200,66,0.1);">🗄️</div>
-<div class="skill-card-title">Database</div>
-<div class="skill-card-desc">Efficient data modeling, querying and management.</div>
-<div class="skill-tags">
-<span class="stag">MongoDB</span><span class="stag">MySQL</span>
-</div>
-</div>
-<div class="skill-card reveal">
-<div class="skill-card-icon" style="background:rgba(160,100,255,0.1);">🎨</div>
-<div class="skill-card-title">Design</div>
-<div class="skill-card-desc">Creating wireframes, prototypes, and visual systems.</div>
-<div class="skill-tags">
-<span class="stag">Figma</span><span class="stag">Adobe XD</span>
-<span class="stag">Photoshop</span><span class="stag">Illustrator</span>
-<span class="stag">Framer</span>
-</div>
-</div>
-<div class="skill-card reveal">
-<div class="skill-card-icon" style="background:rgba(255,100,100,0.1);">☁️</div>
-<div class="skill-card-title">DevOps &amp; Cloud</div>
-<div class="skill-card-desc">Deploying and managing applications reliably in the cloud.</div>
-<div class="skill-tags">
-<span class="stag">AWS</span><span class="stag">Docker</span>
-<span class="stag">GitHub Actions</span><span class="stag">Vercel</span>
-<span class="stag">Nginx</span>
-</div>
-</div>
-<div class="skill-card reveal">
-<div class="skill-card-icon" style="background:rgba(92,200,255,0.1);">🔧</div>
-<div class="skill-card-title">Tools &amp; Others</div>
-<div class="skill-card-desc">Productivity and collaboration tools in my daily workflow.</div>
-<div class="skill-tags">
-<span class="stag">Git</span><span class="stag">VS Code</span>
-<span class="stag">Postman</span><span class="stag">Jira</span>
-<span class="stag">Linux</span>
-</div>
-</div>
-</div>
-<!-- SKILL BARS -->
-<div class="skill-bar-section reveal">
-<div class="skill-bar-title">Proficiency</div>
-<div class="bars-grid">
-<!-- ✏️ EDIT: Update skill names and percentages -->
-<div class="bar-item">
-<div class="bar-header"><span class="bar-name">JavaScript / TypeScript</span><span class="bar-pct">90%</span></div>
-<div class="bar-bg"><div class="bar-fill" data-width="90"></div></div>
-</div>
-<div class="bar-item">
-<div class="bar-header"><span class="bar-name">React / Next.js</span><span class="bar-pct">85%</span></div>
-<div class="bar-bg"><div class="bar-fill" data-width="85"></div></div>
-</div>
-<div class="bar-item">
-<div class="bar-header"><span class="bar-name">Node.js / Express</span><span class="bar-pct">80%</span></div>
-<div class="bar-bg"><div class="bar-fill" data-width="80"></div></div>
-</div>
-<div class="bar-item">
-<div class="bar-header"><span class="bar-name">Python / Django</span><span class="bar-pct">75%</span></div>
-<div class="bar-bg"><div class="bar-fill" data-width="75"></div></div>
-</div>
-<div class="bar-item">
-<div class="bar-header"><span class="bar-name">UI/UX Design (Figma)</span><span class="bar-pct">80%</span></div>
-<div class="bar-bg"><div class="bar-fill" data-width="80"></div></div>
-</div>
-<div class="bar-item">
-<div class="bar-header"><span class="bar-name">Database (SQL/NoSQL)</span><span class="bar-pct">78%</span></div>
-<div class="bar-bg"><div class="bar-fill" data-width="78"></div></div>
-</div>
-</div>
-</div>
-</div>
+  <div class="section-inner">
+    <span class="section-label reveal">What I know</span>
+    <h2 class="section-title reveal" id="skills-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">My Skills</h2>
+    <div class="divider reveal"></div>
+    <p class="section-sub reveal">Technologies and tools I've worked with across design, development, and deployment.</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-icon" style="background:rgba(92,255,177,0.1);">🖥️</div>
+        <div class="skill-card-title">Frontend</div>
+        <div class="skill-card-desc">Building responsive, accessible, and beautiful user interfaces.</div>
+        <div class="skill-tags">
+          <span class="stag">HTML5</span><span class="stag">CSS3</span>
+          <span class="stag">JavaScript</span><span class="stag">React</span>
+          <span class="stag">Next.js</span><span class="stag">Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon" style="background:rgba(61,232,240,0.1);">⚙️</div>
+        <div class="skill-card-title">Backend</div>
+        <div class="skill-card-desc">Crafting robust APIs and server-side logic that scales.</div>
+        <div class="skill-tags">
+          <span class="stag">Node.js</span><span class="stag">Express</span>
+          <span class="stag">Python</span><span class="stag">Django</span>
+          <span class="stag">REST API</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon" style="background:rgba(245,200,66,0.1);">🗄️</div>
+        <div class="skill-card-title">Database</div>
+        <div class="skill-card-desc">Efficient data modeling, querying and management.</div>
+        <div class="skill-tags">
+          <span class="stag">MongoDB</span><span class="stag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon" style="background:rgba(160,100,255,0.1);">🎨</div>
+        <div class="skill-card-title">Design</div>
+        <div class="skill-card-desc">Creating wireframes, prototypes, and visual systems.</div>
+        <div class="skill-tags">
+          <span class="stag">Figma</span><span class="stag">Adobe XD</span>
+          <span class="stag">Photoshop</span><span class="stag">Illustrator</span>
+          <span class="stag">Framer</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon" style="background:rgba(255,100,100,0.1);">☁️</div>
+        <div class="skill-card-title">DevOps &amp; Cloud</div>
+        <div class="skill-card-desc">Deploying and managing applications reliably in the cloud.</div>
+        <div class="skill-tags">
+          <span class="stag">AWS</span><span class="stag">Docker</span>
+          <span class="stag">GitHub Actions</span><span class="stag">Vercel</span>
+          <span class="stag">Nginx</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon" style="background:rgba(92,200,255,0.1);">🔧</div>
+        <div class="skill-card-title">Tools &amp; Others</div>
+        <div class="skill-card-desc">Productivity and collaboration tools in my daily workflow.</div>
+        <div class="skill-tags">
+          <span class="stag">Git</span><span class="stag">VS Code</span>
+          <span class="stag">Postman</span><span class="stag">Jira</span>
+          <span class="stag">Linux</span>
+        </div>
+      </div>
+    </div>
+    <!-- SKILL BARS -->
+    <div class="skill-bar-section reveal">
+      <div class="skill-bar-title">Proficiency</div>
+      <div class="bars-grid">
+        <div class="bar-item">
+          <div class="bar-header"><span class="bar-name">JavaScript / TypeScript</span><span class="bar-pct">90%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-header"><span class="bar-name">React / Next.js</span><span class="bar-pct">85%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-header"><span class="bar-name">Node.js / Express</span><span class="bar-pct">80%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-header"><span class="bar-name">Python / Django</span><span class="bar-pct">75%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-width="75"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-header"><span class="bar-name">UI/UX Design (Figma)</span><span class="bar-pct">80%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-header"><span class="bar-name">Database (SQL/NoSQL)</span><span class="bar-pct">78%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-width="78"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- PROJECTS -->
 <section aria-labelledby="projects-heading" id="projects">
-<div class="section-inner">
-<span class="section-label reveal">My Work</span>
-<h2 class="section-title reveal" id="projects-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Featured Projects</h2>
-<div class="divider reveal"></div>
-<p class="section-sub reveal">A selection of projects I've built — from concept to deployment.</p>
-<div class="projects-filter reveal">
-<button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
-<button class="filter-btn" onclick="filterProjects('web',this)">Web App</button>
-<button class="filter-btn" onclick="filterProjects('mobile',this)">Mobile</button>
-<button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
-</div>
-<div class="projects-grid" id="projectsGrid">
-<!-- ✏️ EDIT: Update each project card below -->
-<article class="proj-card" data-cat="web">
-<div class="proj-thumb proj-thumb-1">
-<span>🛒</span>
-<span class="proj-badge badge-live">Live</span>
-</div>
-<div class="proj-body">
-<h3 class="proj-title">E-Commerce Platform</h3>
-<p class="proj-desc">Full-stack shopping app with real-time inventory, payment gateway integration, and an admin dashboard.</p>
-<div class="proj-tags">
-<span class="ptag ptag-green">React</span>
-<span class="ptag ptag-blue">Node.js</span>
-<span class="ptag ptag-gold">MongoDB</span>
-</div>
-<div class="proj-links">
-<a class="proj-link" href="#">↗ Live Demo</a>
-<a class="proj-link-outline" href="#">⌥ GitHub</a>
-</div>
-</div>
-</article>
-<article class="proj-card" data-cat="web">
-<div class="proj-thumb proj-thumb-2">
-<span>💬</span>
-<span class="proj-badge badge-live">Live</span>
-</div>
-<div class="proj-body">
-<h3 class="proj-title">Real-Time Chat App</h3>
-<p class="proj-desc">Instant messaging with WebSocket support, group chats, media sharing, and push notifications.</p>
-<div class="proj-tags">
-<span class="ptag ptag-green">Next.js</span>
-<span class="ptag ptag-blue">Socket.io</span>
-<span class="ptag ptag-gold">Firebase</span>
-</div>
-<div class="proj-links">
-<a class="proj-link" href="#">↗ Live Demo</a>
-<a class="proj-link-outline" href="#">⌥ GitHub</a>
-</div>
-</div>
-</article>
-<article class="proj-card" data-cat="design">
-<div class="proj-thumb proj-thumb-3">
-<span>📊</span>
-<span class="proj-badge badge-live">Live</span>
-</div>
-<div class="proj-body">
-<h3 class="proj-title">Analytics Dashboard</h3>
-<p class="proj-desc">Data visualization dashboard with interactive charts, dark mode, and CSV export functionality.</p>
-<div class="proj-tags">
-<span class="ptag ptag-green">React</span>
-<span class="ptag ptag-blue">D3.js</span>
-<span class="ptag ptag-gold">Tailwind</span>
-</div>
-<div class="proj-links">
-<a class="proj-link" href="#">↗ Live Demo</a>
-<a class="proj-link-outline" href="#">⌥ GitHub</a>
-</div>
-</div>
-</article>
-<article class="proj-card" data-cat="mobile">
-<div class="proj-thumb proj-thumb-4">
-<span>📱</span>
-<span class="proj-badge badge-wip">WIP</span>
-</div>
-<div class="proj-body">
-<h3 class="proj-title">Fitness Tracker App</h3>
-<p class="proj-desc">Cross-platform mobile app for tracking workouts, calories, and progress with smart reminders.</p>
-<div class="proj-tags">
-<span class="ptag ptag-green">React Native</span>
-<span class="ptag ptag-blue">Expo</span>
-<span class="ptag ptag-gold">SQLite</span>
-</div>
-<div class="proj-links">
-<a class="proj-link-outline" href="#">⌥ GitHub</a>
-</div>
-</div>
-</article>
-<article class="proj-card" data-cat="web">
-<div class="proj-thumb proj-thumb-5">
-<span>🤖</span>
-<span class="proj-badge badge-live">Live</span>
-</div>
-<div class="proj-body">
-<h3 class="proj-title">AI Content Generator</h3>
-<p class="proj-desc">Web tool leveraging OpenAI API to generate blog posts, social captions, and product descriptions.</p>
-<div class="proj-tags">
-<span class="ptag ptag-green">Python</span>
-<span class="ptag ptag-blue">FastAPI</span>
-<span class="ptag ptag-gold">OpenAI</span>
-</div>
-<div class="proj-links">
-<a class="proj-link" href="#">↗ Live Demo</a>
-<a class="proj-link-outline" href="#">⌥ GitHub</a>
-</div>
-</div>
-</article>
-<article class="proj-card" data-cat="design">
-<div class="proj-thumb proj-thumb-6">
-<span>🎨</span>
-<span class="proj-badge badge-live">Live</span>
-</div>
-<div class="proj-body">
-<h3 class="proj-title">Design System</h3>
-<p class="proj-desc">A comprehensive component library and design system with Figma files, documentation, and Storybook.</p>
-<div class="proj-tags">
-<span class="ptag ptag-green">Figma</span>
-<span class="ptag ptag-blue">Storybook</span>
-<span class="ptag ptag-gold">TypeScript</span>
-</div>
-<div class="proj-links">
-<a class="proj-link" href="#">↗ Live Demo</a>
-<a class="proj-link-outline" href="#">⌥ GitHub</a>
-</div>
-</div>
-</article>
-</div>
-</div>
+  <div class="section-inner">
+    <span class="section-label reveal">My Work</span>
+    <h2 class="section-title reveal" id="projects-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Featured Projects</h2>
+    <div class="divider reveal"></div>
+    <p class="section-sub reveal">A selection of projects I've built — from concept to deployment.</p>
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('web',this)">Web App</button>
+      <button class="filter-btn" onclick="filterProjects('mobile',this)">Mobile</button>
+      <button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <article class="proj-card" data-cat="web">
+        <div class="proj-thumb proj-thumb-1">
+          <span>🛒</span>
+          <span class="proj-badge badge-live">Live</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">E-Commerce Platform</h3>
+          <p class="proj-desc">Full-stack shopping app with real-time inventory, payment gateway integration, and an admin dashboard.</p>
+          <div class="proj-tags">
+            <span class="ptag ptag-green">React</span>
+            <span class="ptag ptag-blue">Node.js</span>
+            <span class="ptag ptag-gold">MongoDB</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="#">↗ Live Demo</a>
+            <a class="proj-link-outline" href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card" data-cat="web">
+        <div class="proj-thumb proj-thumb-2">
+          <span>💬</span>
+          <span class="proj-badge badge-live">Live</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Real-Time Chat App</h3>
+          <p class="proj-desc">Instant messaging with WebSocket support, group chats, media sharing, and push notifications.</p>
+          <div class="proj-tags">
+            <span class="ptag ptag-green">Next.js</span>
+            <span class="ptag ptag-blue">Socket.io</span>
+            <span class="ptag ptag-gold">Firebase</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="#">↗ Live Demo</a>
+            <a class="proj-link-outline" href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card" data-cat="design">
+        <div class="proj-thumb proj-thumb-3">
+          <span>📊</span>
+          <span class="proj-badge badge-live">Live</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Analytics Dashboard</h3>
+          <p class="proj-desc">Data visualization dashboard with interactive charts, dark mode, and CSV export functionality.</p>
+          <div class="proj-tags">
+            <span class="ptag ptag-green">React</span>
+            <span class="ptag ptag-blue">D3.js</span>
+            <span class="ptag ptag-gold">Tailwind</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="#">↗ Live Demo</a>
+            <a class="proj-link-outline" href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card" data-cat="mobile">
+        <div class="proj-thumb proj-thumb-4">
+          <span>📱</span>
+          <span class="proj-badge badge-wip">WIP</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Fitness Tracker App</h3>
+          <p class="proj-desc">Cross-platform mobile app for tracking workouts, calories, and progress with smart reminders.</p>
+          <div class="proj-tags">
+            <span class="ptag ptag-green">React Native</span>
+            <span class="ptag ptag-blue">Expo</span>
+            <span class="ptag ptag-gold">SQLite</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link-outline" href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card" data-cat="web">
+        <div class="proj-thumb proj-thumb-5">
+          <span>🤖</span>
+          <span class="proj-badge badge-live">Live</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">AI Content Generator</h3>
+          <p class="proj-desc">Web tool leveraging OpenAI API to generate blog posts, social captions, and product descriptions.</p>
+          <div class="proj-tags">
+            <span class="ptag ptag-green">Python</span>
+            <span class="ptag ptag-blue">FastAPI</span>
+            <span class="ptag ptag-gold">OpenAI</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="#">↗ Live Demo</a>
+            <a class="proj-link-outline" href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card" data-cat="design">
+        <div class="proj-thumb proj-thumb-6">
+          <span>🎨</span>
+          <span class="proj-badge badge-live">Live</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Design System</h3>
+          <p class="proj-desc">A comprehensive component library and design system with Figma files, documentation, and Storybook.</p>
+          <div class="proj-tags">
+            <span class="ptag ptag-green">Figma</span>
+            <span class="ptag ptag-blue">Storybook</span>
+            <span class="ptag ptag-gold">TypeScript</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="#">↗ Live Demo</a>
+            <a class="proj-link-outline" href="#">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
-<!-- SERVICES -->
-
-<!-- ✏️ EDIT: Update services below -->
-
 
 <!-- CONTACT -->
 <section aria-labelledby="contact-heading" id="contact">
-<div class="section-inner">
-<span class="section-label reveal">Get In Touch</span>
-<h2 class="section-title reveal" id="contact-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Contact Me</h2>
-<div class="divider reveal"></div>
-<p class="section-sub reveal">want to contact me ? or any types of message can be send here  . I would love to hear to you.</p>
-<div class="contact-grid">
-<div class="contact-info reveal">
-<!-- ✏️ EDIT: Update contact details -->
-<div class="contact-item">
-<div class="contact-ico">📧</div>
-<div>
-<div class="contact-label">Email</div>
-<div class="contact-val">Vaibhavkumarjha414@gmail.com</div>
-</div>
-</div>
-<div class="contact-item">
-<div class="contact-ico">📞</div>
-<div>
-<div class="contact-label">Phone</div>
-<div class="contact-val">+91 9128835633</div>
-</div>
-</div>
-<div class="contact-item">
-<div class="contact-ico">📍</div>
-<div>
-<div class="contact-label">Location</div>
-<div class="contact-val">Darbhanga , Bihar,  India</div>
-</div>
-</div>
-<!-- ✏️ EDIT: Update social links -->
-
-   <div class="social-title" style="font-family:'Poppins',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5cffb1;border-bottom:2px solid #00c6ff;display:inline-block;padding-bottom:3px;">
-  Find me on
-</div>
-  <div class="social-row">
-  <a aria-label="GitHub" class="social-btn" href="https://github.com/Vaibhav-Jha7" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>
-
-  <a aria-label="LinkedIn" class="social-btn" href="https://www.linkedin.com/in/Vaibhav-kumar-jha32" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>
-
-  <a aria-label="Twitter" class="social-btn" href="https://twitter.com/vaibhavkumarjha" target="_blank">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/vaibhav_jha19_" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
-</div>
-</div>
-<br>
-<br>
-
-<div class="contact-form reveal">
-<form id="contactForm" novalidate="">
-<div class="form-row">
-<div class="form-group">
-<label for="name">Your Name *</label>
-<input id="name" maxlength="100" minlength="2" name="name" placeholder="YOUR NAME" required="" type="text"/>
-<div class="field-error" data-for="name"></div>
-</div>
-<div class="form-group">
-<label for="email">Email Address *</label>
-<input id="email" name="email" placeholder="email@example.com" required="" type="email"/>
-<div class="field-error" data-for="email"></div>
-</div>
-</div>
-<div class="form-group">
-<label for="subject">Subject</label>
-<input id="subject" maxlength="150" name="name" placeholder="subject"text"/>
-<div class="field-error" data-for="subject"></div>
-</div>
-<div class="form-group">
-<label for="message">Message *</label>
-<textarea id="message" maxlength="5000" minlength="10" name="message" placeholder="wriite your message here..." required=""></textarea>
-<div class="field-error" data-for="message"></div>
-</div>
-<button class="form-submit" id="submitBtn" type="submit">Send Message →</button>
-<div id="form-status" style="margin-top:1rem;font-size:0.9rem;display:none;"></div>
-</form>
-</div>
-</div>
-</div>
+  <div class="section-inner">
+    <span class="section-label reveal">Get In Touch</span>
+    <h2 class="section-title reveal" id="contact-heading" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Contact Me</h2>
+    <div class="divider reveal"></div>
+    <p class="section-sub reveal">Want to contact me? Any type of message can be sent here. I would love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-ico">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">Vaibhavkumarjha414@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val">+91 9128835633</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">Darbhanga, Bihar, India</div>
+          </div>
+        </div>
+        <div class="social-title" style="font-family:'Poppins',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5cffb1;border-bottom:2px solid #00c6ff;display:inline-block;padding-bottom:3px;">
+          Find me on
+        </div>
+        <div class="social-row">
+          <a aria-label="GitHub" class="social-btn" href="https://github.com/Vaibhav-Jha7" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a aria-label="LinkedIn" class="social-btn" href="https://www.linkedin.com/in/Vaibhav-kumar-jha32" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a aria-label="Twitter" class="social-btn" href="https://twitter.com/vaibhavkumarjha" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/vaibhav_jha19_" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="contact-form reveal">
+      <form id="contactForm" novalidate="">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input id="name" maxlength="100" minlength="2" name="name" placeholder="YOUR NAME" required="" type="text"/>
+            <div class="field-error" data-for="name"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" placeholder="email@example.com" required="" type="email"/>
+            <div class="field-error" data-for="email"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input id="subject" maxlength="150" name="subject" placeholder="Subject" type="text"/>
+          <div class="field-error" data-for="subject"></div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" maxlength="5000" minlength="10" name="message" placeholder="Write your message here..." required=""></textarea>
+          <div class="field-error" data-for="message"></div>
+        </div>
+        <button class="form-submit" id="submitBtn" type="submit">Send Message →</button>
+        <div id="form-status" style="margin-top:1rem;font-size:0.9rem;display:none;"></div>
+      </form>
+    </div>
+  </div>
 </section>
+
 <!-- FOOTER -->
 <footer>
-<div class="footer-inner">
-<a class="footer-logo" href="#home">VKJ<span>.</span></a>
-<p class="footer-copy">© 2026 Vaibhav Kumar Jha </p>
-<div class="footer-links">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+  <div class="footer-inner">
+    <a class="footer-logo" href="#home">VKJ<span>.</span></a>
+    <p class="footer-copy">© 2026 Vaibhav Kumar Jha</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </footer>
+
 <!-- Back to Top -->
 <button aria-label="Back to top" id="back-top" title="Back to top">↑</button>
+
 <script>
-  // ====== API CONFIG ======
-  // ✏️ EDIT: Replace with your actual Render backend URL after deployment
-  // e.g. "https://vaibhav-portfolio-backend.onrender.com"
-  const API_BASE_URL = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
-    ? 'http://localhost:5000/api/contact'
-    : 'https://YOUR-RENDER-APP-NAME.onrender.com';
-  const CONTACT_ENDPOINT = `${API_BASE_URL}/api/contact`;
-     console.log("API:", CONTACT_ENDPOINT); 
+  // ====== EMAILJS INIT ======
+  (function() {
+    emailjs.init("31-tl_g1l2GnukYOU");
+  })();
 
   // ====== CUSTOM CURSOR ======
   const dot = document.getElementById('cursor-dot');
@@ -1569,10 +1528,10 @@
   });
   backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-  // ====== CONTACT FORM (connected to backend API) ======
+  // ====== CONTACT FORM — SINGLE HANDLER WITH VALIDATION + EMAILJS ======
   const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const formStatus = document.getElementById('form-status');
+  const submitBtn   = document.getElementById('submitBtn');
+  const formStatus  = document.getElementById('form-status');
 
   function clearFieldErrors(){
     document.querySelectorAll('.field-error').forEach(el=>{
@@ -1584,66 +1543,64 @@
   }
 
   function showFieldError(field, msg){
-    const errEl = document.querySelector(`.field-error[data-for="${field}"]`);
+    const errEl   = document.querySelector(`.field-error[data-for="${field}"]`);
     const inputEl = document.getElementById(field);
-    if(errEl){ errEl.textContent = msg; errEl.classList.add('show'); }
-    if(inputEl){ inputEl.classList.add('invalid'); }
+    if(errEl)   { errEl.textContent = msg; errEl.classList.add('show'); }
+    if(inputEl) { inputEl.classList.add('invalid'); }
   }
 
   function showStatus(msg, type){
-    formStatus.textContent = msg;
-    formStatus.className = type; // 'success' or 'error'
+    formStatus.textContent  = msg;
+    formStatus.className    = type;   // 'success' or 'error'
     formStatus.style.display = 'block';
     setTimeout(()=>{ formStatus.style.display='none'; }, 6000);
   }
 
-  contactForm.addEventListener('submit', async function(e){
+  // ── ONE submit listener that validates FIRST, then sends via EmailJS ──
+  contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     clearFieldErrors();
-    console.log("Form submitted");
 
-    const formData = {
-      name: document.getElementById('name').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      subject: document.getElementById('subject').value.trim(),
-      message: document.getElementById('message').value.trim(),
-    };
+    // Read values
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-    // Basic client-side validation (mirrors backend rules)
+    // Validate all required fields
     let valid = true;
-    if(formData.name.length < 2){ showFieldError('name','Name must be at least 2 characters.'); valid=false; }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)){ showFieldError('email','Please enter a valid email address.'); valid=false; }
-    if(formData.message.length < 10){ showFieldError('message','Message must be at least 10 characters.'); valid=false; }
-    if(!valid) return;
 
-    submitBtn.textContent = 'Sending…';
-    submitBtn.disabled = true;
-
-    try {
-      const res = await fetch(CONTACT_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if(res.ok && data.success){
-        showStatus('✓ ' + (data.message || "Message sent! I'll get back to you soon."), 'success');
-        contactForm.reset();
-      } else if (data.errors && Array.isArray(data.errors)) {
-        data.errors.forEach(err => showFieldError(err.field, err.message));
-        showStatus(data.message || 'Please fix the errors above.', 'error');
-      } else {
-        showStatus(data.message || 'Something went wrong. Please try again.', 'error');
-      }
-    } catch (err) {
-      console.error('Contact form error:', err);
-      showStatus('Network error — please check your connection and try again.', 'error');
-    } finally {
-      submitBtn.textContent = 'Send Message →';
-      submitBtn.disabled = false;
+    if (name.length < 2) {
+      showFieldError('name', 'Name must be at least 2 characters.');
+      valid = false;
     }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showFieldError('email', 'Please enter a valid email address.');
+      valid = false;
+    }
+    if (message.length < 10) {
+      showFieldError('message', 'Message must be at least 10 characters.');
+      valid = false;
+    }
+
+    // Stop here if any field failed validation
+    if (!valid) return;
+
+    // All fields are valid — disable button and send via EmailJS
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled    = true;
+
+    emailjs.sendForm('service_impbc64', 'template_l2n7nr5', this)
+      .then(function() {
+        showStatus('✅ Message sent successfully! I\'ll get back to you soon.', 'success');
+        contactForm.reset();
+      })
+      .catch(function(error) {
+        showStatus('❌ Failed to send message: ' + (error.text || 'Please try again.'), 'error');
+      })
+      .finally(function() {
+        submitBtn.textContent = 'Send Message →';
+        submitBtn.disabled    = false;
+      });
   });
 
   // ====== NAV ACTIVE STATE ======
@@ -1658,29 +1615,5 @@
   });
 </script>
 
-<script>
-(function() {
-  emailjs.init("31-tl_g1l2GnukYOU");
-})();
-
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  emailjs.sendForm(
-    "service_impbc64",
-    "template_l2n7nr5",
-    this
-  )
-  .then(function() {
-    alert("✅ Message sent successfully!");
-    form.reset();
-  }, function(error) {
-    alert("❌ Failed to send message: " + error.text);
-  });
-});
-</script>
 </body>
-
 </html>
